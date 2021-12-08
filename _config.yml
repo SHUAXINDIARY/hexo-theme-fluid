@@ -18,11 +18,13 @@
 
 # 用于浏览器标签的图标
 # Icon for browser tab
-favicon: /img/favicon.png
+favicon: http://img.shuaxinjs.cn/favicon-16x16-next.png
+
 
 # 用于苹果设备的图标
 # Icon for Apple touch
-apple_touch_icon: /img/favicon.png
+apple_touch_icon: http://img.shuaxinjs.cn/favicon-16x16-next.png
+
 
 # 浏览器标签页中的标题分隔符，效果： 文章名 - 站点名
 # Title separator in browser tab, eg: article - site
@@ -61,7 +63,7 @@ code:
 
       # 是否根据 style 改变代码背景色（如果 style 是深色背景别忘了开启此项）
       # If true, the code background will change color based on the style (If style has a dark background, don't forget to true)
-      bg_color: false
+      bg_color: ture
 
     prismjs:
       # 在下方链接页面右侧的圆形按钮挑选 style 填入，也可以直接填入 css 链接
@@ -315,7 +317,8 @@ navbar:
     - { key: "category", link: "/categories/", icon: "iconfont icon-category-fill" }
     - { key: "tag", link: "/tags/", icon: "iconfont icon-tags-fill" }
     - { key: "about", link: "/about/", icon: "iconfont icon-user-fill" }
-    #- { key: "links", link: "/links/", icon: "iconfont icon-link-fill" }
+    # - { key: "站点", link: "/sitemap/", icon: "iconfont icon-users" }
+    - { key: "links", link: "/links/", icon: "iconfont icon-link-fill" }
     - { key: "articlecount", link: "/articlecount/", icon: "iconfont icon-codeforces" }
 
 
@@ -431,7 +434,7 @@ footer:
 index:
   # 首页 Banner 头图，可以是相对路径或绝对路径，以下相同
   # Path of Banner image, can be a relative path or an absolute path, the same on other pages
-  banner_img: /img/default.png
+  banner_img: https://img.shuaxinjs.cn/apple.jpg
 
   # 头图高度，屏幕百分比
   # Height ratio of banner image
@@ -450,7 +453,7 @@ index:
 
     # 为空则按 hexo config.subtitle 显示
     # If empty, text based on `subtitle` in hexo config
-    text: "An elegant Material-Design theme for Hexo"
+    text: 学习是一条令人时而喜极若狂、时而郁郁寡欢的道路
 
     # 通过 API 接口作为首页副标题的内容，必须返回的是 JSON 格式，如果请求失败则按 text 字段显示，该功能必须先开启 typing 打字机功能
     # Subtitle of the homepage through the API, must be returned a JSON. If the request fails, it will be displayed in `text` value. This feature must first enable the typing animation
@@ -503,7 +506,7 @@ index:
 # Post Page
 #---------------------------
 post:
-  banner_img: /img/default.png
+  banner_img: https://img.shuaxinjs.cn/51590BF0-4E0B-4FCF-A188-D17D198D1AD0(20200924-103.JPG
   banner_img_height: 70
   banner_mask_alpha: 0.3
 
@@ -797,7 +800,7 @@ cusdis:
 # Archive Page
 #---------------------------
 archive:
-  banner_img: /img/default.png
+  banner_img: https://img.shuaxinjs.cn/E39CA8C9-4D65-4A7D-9E70-F3E1DB53254E(20200403-180.JPG
   banner_img_height: 60
   banner_mask_alpha: 0.3
   subtitle:
@@ -809,7 +812,7 @@ archive:
 #---------------------------
 category:
   enable: true
-  banner_img: /img/default.png
+  banner_img: https://img.shuaxinjs.cn/E39CA8C9-4D65-4A7D-9E70-F3E1DB53254E(20200403-180.JPG
   banner_img_height: 60
   banner_mask_alpha: 0.3
   subtitle:
@@ -839,7 +842,7 @@ category:
 #---------------------------
 tag:
   enable: true
-  banner_img: /img/default.png
+  banner_img: https://img.shuaxinjs.cn/E39CA8C9-4D65-4A7D-9E70-F3E1DB53254E(20200403-180.JPG
   banner_img_height: 80
   banner_mask_alpha: 0.3
   subtitle:
@@ -857,19 +860,19 @@ tag:
 #---------------------------
 about:
   enable: true
-  banner_img: /img/default.png
+  banner_img: https://img.shuaxinjs.cn/E39CA8C9-4D65-4A7D-9E70-F3E1DB53254E(20200403-180.JPG
   banner_img_height: 60
   banner_mask_alpha: 0.3
   subtitle:
-  avatar: /img/avatar.png
-  name: "Fluid"
-  intro: "An elegant theme for Hexo"
+  avatar: https://img.shuaxinjs.cn/newavatar.jpg
+  name: "刷新"
+  intro: "普通程序员"
   # 更多图标可从 https://hexo.fluid-dev.com/docs/icon/ 查找，`class` 代表图标的 css class，添加 `qrcode` 后，图标不再是链接而是悬浮二维码
   # More icons can be found from https://hexo.fluid-dev.com/docs/en/icon/  `class` is the css class of the icon. If adding `qrcode`, The icon is no longer a link, but a hovering QR code
   icons:
-    - { class: "iconfont icon-github-fill", link: "https://github.com", tip: "GitHub" }
-    - { class: "iconfont icon-douban-fill", link: "https://douban.com", tip: "豆瓣" }
-    - { class: "iconfont icon-wechat-fill", qrcode: "/img/favicon.png" }
+    - { class: "iconfont icon-github-fill", link: "https://github.com/SHUAXINDIARY", tip: "GitHub" }
+    # - { class: "iconfont icon-douban-fill", link: "https://douban.com", tip: "豆瓣" }
+    # - { class: "iconfont icon-wechat-fill", qrcode: "/img/favicon.png" }
 
 
 #---------------------------
@@ -880,7 +883,7 @@ about:
 # Custom Page through `hexo new page`
 #---------------------------
 page:
-  banner_img: /img/default.png
+  banner_img: https://img.shuaxinjs.cn/E39CA8C9-4D65-4A7D-9E70-F3E1DB53254E(20200403-180.JPG
   banner_img_height: 60
   banner_mask_alpha: 0.3
 
@@ -891,7 +894,7 @@ page:
 #---------------------------
 page404:
   enable: true
-  banner_img: /img/default.png
+  banner_img: https://img.shuaxinjs.cn/E39CA8C9-4D65-4A7D-9E70-F3E1DB53254E(20200403-180.JPG
   banner_img_height: 85
   banner_mask_alpha: 0.3
   subtitle: "Page not found"
@@ -903,30 +906,95 @@ page404:
 #---------------------------
 links:
   enable: true
-  banner_img: /img/default.png
+  banner_img: https://img.shuaxinjs.cn/E39CA8C9-4D65-4A7D-9E70-F3E1DB53254E(20200403-180.JPG
   banner_img_height: 60
   banner_mask_alpha: 0.3
-  subtitle:
+  subtitle: 大佬们
   # 友链的成员项
   # Member item of page
   items:
     - {
-      title: "Fluid Blog",
-      intro: "主题博客",
-      link: "https://hexo.fluid-dev.com/",
-      avatar: "/img/favicon.png"
+      title: "soulteary",
+      intro: "博客",
+      link: "https://soulteary.com/",
+      # image: "https://blog.shuaxinjs.cn/images/favicon-16x16-next.png"
     }
+
     - {
-      title: "Fluid Docs",
-      intro: "主题使用指南",
-      link: "https://hexo.fluid-dev.com/docs/",
-      avatar: "/img/favicon.png"
+      title: "公子",
+      intro: "博客",
+      link: "https://imnerd.org/",
+      # image: "https://blog.shuaxinjs.cn/images/favicon-16x16-next.png"
     }
+
     - {
-      title: "Fluid Repo",
-      intro: "主题 GitHub 仓库",
-      link: "https://github.com/fluid-dev/hexo-theme-fluid",
-      avatar: "/img/favicon.png"
+      title: "雪碧",
+      intro: "博客",
+      link: "https://ewind.us/",
+      # image: "https://blog.shuaxinjs.cn/images/favicon-16x16-next.png"
+    }
+
+    - {
+      title: "DanAbramov",
+      intro: "博客",
+      link: "https://overreacted.io/",
+      # image: "https://blog.shuaxinjs.cn/images/favicon-16x16-next.png"
+    }
+
+    - {
+      title: "于江水",
+      intro: "GitHub",
+      link: "https://github.com/yujiangshui?tab=repositories",
+      # image: "https://blog.shuaxinjs.cn/images/favicon-16x16-next.png"
+    }
+
+    - {
+      title: "张秋怡",
+      intro: "博客",
+      link: "https://joyeecheung.github.io/blog/",
+      # image: "https://blog.shuaxinjs.cn/images/favicon-16x16-next.png"
+    }
+
+    - {
+      title: "敖天羽",
+      intro: "博客",
+      link: "https://www.codesky.me/",
+      # image: "https://blog.shuaxinjs.cn/images/favicon-16x16-next.png"
+    }
+
+    - {
+      title: "童话",
+      intro: "博客",
+      link: "http://www.thewashingtonhua.com/",
+      # image: "https://blog.shuaxinjs.cn/images/favicon-16x16-next.png"
+    }
+
+    - {
+      title: "张鑫旭",
+      intro: "博客",
+      link: "https://www.zhangxinxu.com/",
+      # image: "https://blog.shuaxinjs.cn/images/favicon-16x16-next.png"
+    }
+
+    - {
+        title: "FCW",
+        intro: "博客",
+        link: "http://www.fuchaowei.cn/",
+        # image: "https://blog.shuaxinjs.cn/images/favicon-16x16-next.png"
+    }
+
+    - {
+      title: "zcbenz",
+      intro: "GitHub",
+      link: "https://github.com/zcbenz",
+      # image: "https://blog.shuaxinjs.cn/images/favicon-16x16-next.png"
+    }
+
+    - {
+        title: "youli",
+        intro: "GitHub",
+        link: "https://github.com/youliso",
+        # image: "https://blog.shuaxinjs.cn/images/favicon-16x16-next.png"
     }
 
   # 当成员头像加载失败时，替换为指定图片
@@ -955,7 +1023,7 @@ links:
 #---------------------------
 articlecount:
   enable: true
-  banner_img: /img/default.png
+  banner_img: https://img.shuaxinjs.cn/E39CA8C9-4D65-4A7D-9E70-F3E1DB53254E(20200403-180.JPG
   banner_img_height: 60
   banner_mask_alpha: 0.3
   subtitle:
