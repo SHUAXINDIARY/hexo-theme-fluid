@@ -9,6 +9,9 @@
 
 <div>
     <div>
+        <p class="h4" style="font-family: ZCOOL KuaiLe;"><%= __('articlecount.thisYear') %></p>
+        <svg class="line-chart-thisYear charts"></svg>
+        <svg class="pie-chart-thisYear charts"></svg>
         <p class="h4" style="font-family: ZCOOL KuaiLe;"><%= __('articlecount.des') %></p>
         <% if (theme.articlecount.date.year) { %>
             <svg class="line-chart-year charts"></svg>
@@ -62,8 +65,8 @@
             }
         });
     }
-    const loadPieChart = (commonOptions = {}, data = {}) => {
-        const svg = document.querySelector('.pie-chart-week')
+    const loadPieChart = (commonOptions = {}, data = {}, domName) => {
+        const svg = document.querySelector(domName || '.pie-chart-week')
         const pieChart = new chartXkcd.Pie(svg, {
             title: '<%-  __('date.week') %>',
             data: {
@@ -76,8 +79,8 @@
             },
         });
     }
-    const loadLineChart = (commonOptions = {}, data = {}) => {
-        const svg = document.querySelector('.line-chart-year')
+    const loadLineChart = (commonOptions = {}, data = {}, domName) => {
+        const svg = document.querySelector(domName || '.line-chart-year')
         const lineChart = new chartXkcd.Line(svg, {
             title: '<%-  __('date.year') %>',
             data: {
@@ -101,6 +104,8 @@
             <% if (theme.articlecount.date.week) { %>
                 loadPieChart(options, chartsData.week)
             <% } %>
+            loadLineChart(options, chartsData.thisYearByLine, '.line-chart-thisYear')
+            loadPieChart(options, chartsData.thisYearByPine, '.pie-chart-thisYear')
         }
     }
     // 加载zcool-kuaile 字体
@@ -111,7 +116,7 @@
         // 获取helper函数计算后的数据 参数为获取翻译文案的函数
         const chartsData = <%- countArticle(__) %>
         renderChart({options, chartsData})
-        document.getElementById('color-toggle-btn').addEventListener('click',() => {
+        document.getElementById('color-toggle-btn').addEventListener('click', () => {
             const options = takeOptionsByMode(commonOptions)
             renderChart({options, chartsData})
         })

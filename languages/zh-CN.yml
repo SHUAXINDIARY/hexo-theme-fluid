@@ -46,7 +46,8 @@ links:
 articlecount:
   title: 统计
   subtitle: 统计
-  des: 文章数统计
+  des: 文章总数数统计
+  thisYear: 今年
 
 date:
   year: 按年

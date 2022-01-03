@@ -18,10 +18,12 @@ const takeYearData = ({ originData, __ }) => {
   const years = Object.keys(cacheData);
   return {
     labels  : years.sort((a, b) => a - b),
-    datasets: [{
-      label: __('article'),
-      data : years.sort((a, b) => a - b).map(item => cacheData[item])
-    }]
+    datasets: [
+      {
+        label: __('article'),
+        data : years.sort((a, b) => a - b).map((item) => cacheData[item])
+      }
+    ]
   };
 };
 const takeMonthData = ({ originData, __ }) => {
@@ -39,11 +41,17 @@ const takeMonthData = ({ originData, __ }) => {
     }
   });
   return {
-    labels  : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map(item => __(`month.${item}`) || item),
-    datasets: [{
-      label: __('article'),
-      data : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map(item => cacheData[item] || 0)
-    }]
+    labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map(
+      (item) => __(`month.${item}`) || item
+    ),
+    datasets: [
+      {
+        label: __('article'),
+        data : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map(
+          (item) => cacheData[item] || 0
+        )
+      }
+    ]
   };
 };
 const takeWeekData = ({ originData, __ }) => {
@@ -60,11 +68,13 @@ const takeWeekData = ({ originData, __ }) => {
     }
   });
   return {
-    labels  : [1, 2, 3, 4, 5, 6, 0].map(item => __(`week.${item}`) || item),
-    datasets: [{
-      label: __('article'),
-      data : [1, 2, 3, 4, 5, 6, 0].map(item => cacheData[item] || 0)
-    }]
+    labels  : [1, 2, 3, 4, 5, 6, 0].map((item) => __(`week.${item}`) || item),
+    datasets: [
+      {
+        label: __('article'),
+        data : [1, 2, 3, 4, 5, 6, 0].map((item) => cacheData[item] || 0)
+      }
+    ]
   };
 };
 
@@ -77,7 +87,7 @@ hexo.extend.helper.register('countArticle', function(__) {
     length: hexo.locals.get('posts').length
   };
   // 统计数据
-  const result = hexo.locals.get('posts').data.map(item => {
+  const result = hexo.locals.get('posts').data.map((item) => {
     return {
       year : item.date.year(),
       month: item.date.month(),
@@ -87,5 +97,14 @@ hexo.extend.helper.register('countArticle', function(__) {
   chartsData.year = takeYearData({ originData: result, __ });
   chartsData.month = takeMonthData({ originData: result, __ });
   chartsData.week = takeWeekData({ originData: result, __ });
+  // 今年月份数据
+  chartsData.thisYearByLine = takeMonthData({
+    originData: result.filter((item) => item.year === new Date().getFullYear()),
+    __
+  });
+  chartsData.thisYearByPine = takeWeekData({
+    originData: result.filter((item) => item.year === new Date().getFullYear()),
+    __
+  });
   return JSON.stringify(chartsData);
 });

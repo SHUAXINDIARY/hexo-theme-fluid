@@ -46,7 +46,8 @@ links:
 articlecount:
   title: ArticleCount
   subtitle: ArticleCount
-  des: ArticleCount
+  des: TotalArticleCount
+  thisYear: ThisYear
 
 date:
   year: Year
