@@ -977,10 +977,9 @@ links:
     }
 
     - {
-        title: "FCW",
+        title: "popring",
         intro: "博客",
-        link: "http://www.fuchaowei.cn/",
-        # image: "https://blog.shuaxinjs.cn/images/favicon-16x16-next.png"
+        link: "https://popring.github.io"
     }
 
     - {
